@@ -197,17 +197,11 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 78vh;
   width: 100%;
-  flex-grow: 1;
-}
-main:after{
-  content:"";
-  display: block;
-  clear: both;
 }
 
 footer {
-  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
