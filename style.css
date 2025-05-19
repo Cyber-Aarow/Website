@@ -1,5 +1,7 @@
 html,
 body {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   min-height: 100vh;
   margin: 0;
@@ -195,11 +197,17 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 78vh; /* Reduced from 100vh */
   width: 100%;
+  flex-grow: 1;
+}
+main:after{
+  content:"";
+  display: block;
+  clear: both;
 }
 
 footer {
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -305,14 +313,14 @@ footer {
 /*--------------------------------------------------------------Projects--------------------------------------------------------------------- */
 main.projects-main {
   position: relative;
-  min-height: 60vh;
+  min-height: 100vh;
   width: 100%;
   background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  flex: 1;
+  padding-bottom: 500px;
 }
 
 main.projects-main::before {
@@ -479,6 +487,8 @@ main.projects-main::before {
 }
 
 .projects_content {
+  z-index: 3;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
